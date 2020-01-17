@@ -19,7 +19,7 @@ const Users = () => {
   };
 
   const filteredUsers = ctx.users.filter(user => {
-    const re = new RegExp(state.searchName, 'g');
+    const re = new RegExp(state.searchName.toLowerCase(), 'g');
     if (user.name.toLowerCase().match(re)) {
       return user;
     }
